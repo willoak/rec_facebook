@@ -1,0 +1,132 @@
+:root {
+    --color-bg: #f0f2f5;
+    --bg-white: #ffffff;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+}
+
+body {
+    background-color: var(--color-bg);
+}
+.fb-h-6 {
+    height: 60px;
+}
+.fb-p-lr-1 {
+    padding: 0 10px;
+}
+.fb-p-lr-2 {
+    padding: 0 20px;
+}
+.fb-flex {
+    display: flex;
+}
+.fb-justify-btw {
+    justify-content: space-between;
+}
+.fb-justify-center {
+    justify-content: center;
+}
+.fb-justify-end {
+    justify-content: flex-end;
+}
+.fb-align-center {
+    align-items: center;
+}
+.fb-absolute {
+    position: absolute;
+}
+.fb-relative {
+    position: relative;
+}
+
+
+#fb-h-geral {
+    background-color: var(--bg-white);
+    height: 60px;
+}
+#fb-h-geral .fb-box{
+    flex: 1;
+}
+#fb-h-geral ul {
+    list-style: none;
+    margin: 0;
+}
+#fb-h-geral ul li{
+    display: inline;
+}
+.fb-logo {
+    background-color: blue;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-right: 10px;
+}
+.fb-search input {
+    height: 40px;
+    border-radius: 20px;
+    border: none;
+    background-color: var(--color-bg);
+    width: 240px;
+    padding: 0 10px 0 50px;
+}
+.fb-search .fb-icon-search {
+    width: 20px;
+    height: 20px;
+    background-color: #000;
+    border-radius: 50%;
+    position: absolute;
+    top: 10px;
+    left: 15px;
+}
+
+.fb-shortcuts {
+ 
+}
+.fb-shortcuts li, .fb-shortcuts li a {
+    display: inline-block;
+    height: 48px;
+}
+.fb-shortcuts li a {
+    border-radius: 5px;
+    padding: 0 40px;
+    line-height: 48px;
+}
+.fb-shortcuts li a.active {
+    background-color: var(--color-bg);
+}
+.fb-shortcuts li a:hover {
+    background-color: var(--color-bg);
+}
+
+.fb-user-actions li a {
+    text-align: center;
+    line-height: 40px;
+}
+.fb-user-actions li:not(.fb-user) a {
+    border-radius: 50%;
+    background-color: var(--color-bg);
+    width: 40px;
+    height: 40px;
+    display: inline-block;
+    margin: 0 5px;
+}
+.fb-user-actions li.fb-user {
+    margin-right: 15px;
+    font-weight: bold;
+}
+.fb-user-actions li.fb-user span {
+    border-radius: 50%;
+    background-color: var(--color-bg);
+    width: 30px;
+    height: 30px;
+    display: inline-block;
+    margin-right: 5px;
+}
