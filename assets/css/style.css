@@ -1,6 +1,9 @@
 :root {
     --color-bg: #f0f2f5;
-    --bg-white: #ffffff;
+    --color-bg-white: #ffffff;
+    --color-blue-h: #1877f2;
+    --color-bg-eee: #eeeeee;
+    --color-bg-alert: #f02849;
 }
 * {
     margin: 0;
@@ -14,6 +17,7 @@ a {
 
 body {
     background-color: var(--color-bg);
+    font-family: Arial, Helvetica, sans-serif;
 }
 .fb-h-6 {
     height: 60px;
@@ -45,10 +49,13 @@ body {
 .fb-relative {
     position: relative;
 }
+.fb-box-shadow {
+    box-shadow: 0 0 10px #ccc;
+}
 
 
 #fb-h-geral {
-    background-color: var(--bg-white);
+    background-color: var(--color-bg-white);
     height: 60px;
 }
 #fb-h-geral .fb-box{
@@ -62,7 +69,7 @@ body {
     display: inline;
 }
 .fb-logo {
-    background-color: blue;
+    background-color:var(--color-blue-h);
     width: 40px;
     height: 40px;
     border-radius: 50%;
@@ -87,8 +94,16 @@ body {
     left: 15px;
 }
 
-.fb-shortcuts {
- 
+.fb-shortcuts .fb-alert {
+    position: absolute;
+    background: var(--color-bg-alert);
+    color: var(--color-bg-white);
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    text-align: center;
+    line-height: 20px;
+    font-size: 12px;
 }
 .fb-shortcuts li, .fb-shortcuts li a {
     display: inline-block;
@@ -98,13 +113,27 @@ body {
     border-radius: 5px;
     padding: 0 40px;
     line-height: 48px;
+    position: relative;
+}
+.fb-shortcuts li a.active::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 3px;
+    bottom: -6px;
+    background-color: var(--color-blue-h);
+    left: 0;
 }
 .fb-shortcuts li a.active {
-    background-color: var(--color-bg);
+    color: var(--color-blue-h);
 }
 .fb-shortcuts li a:hover {
-    background-color: var(--color-bg);
+    background-color: var(--color-bg-eee);
 }
+.fb-shortcuts li a.active:hover {
+    background-color: var(--bg-white);
+}
+
 
 .fb-user-actions li a {
     text-align: center;
