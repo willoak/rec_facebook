@@ -140,7 +140,7 @@ body {
     background-color: var(--color-bg-eee);
 }
 .fb-shortcuts li a.active:hover {
-    background-color: var(--bg-white);
+    background-color: var(--color-bg-white);
 }
 
 
