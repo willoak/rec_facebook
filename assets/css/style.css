@@ -338,3 +338,77 @@ body {
     background-color: var(--color-bg-white);
     padding: 10px;
 }
+
+#fb-create-post .fb-post + .fb-post {
+    margin-top: 20px;
+}
+.fb-post-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+.fb-post-user {
+    display: flex;
+    align-items: center;
+}
+.fb-post-avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 8px;
+}
+.fb-post-date {
+    font-size: 0.8rem;
+    color: #65676b;
+}
+.fb-post-actions {
+    position: relative;
+}
+.fb-post-actions a {
+    margin-left: 5px;
+    color: #65676b;
+}
+.fb-post-actions .fb-submenu {
+    display: none;
+    position: absolute;
+    top: 20px;
+    right: 0;
+    background-color: var(--color-bg-white);
+    box-shadow: 0 0 10px #ccc;
+    border-radius: 8px;
+    padding: 10px;
+    z-index: 10;
+}
+.fb-post-actions:hover .fb-submenu,
+.fb-post-actions .fb-submenu:hover {
+    display: block;
+}
+.fb-post-body img,
+.fb-post-body video {
+    width: 100%;
+    margin: 10px 0;
+    border-radius: 8px;
+}
+.fb-post-info {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.9rem;
+    color: #65676b;
+    padding: 5px 0;
+}
+.fb-post-buttons {
+    display: flex;
+    justify-content: space-around;
+    border-top: 1px solid #ddd;
+    padding-top: 5px;
+    margin-top: 5px;
+}
+.fb-post-buttons button {
+    flex: 1;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 5px 0;
+}
