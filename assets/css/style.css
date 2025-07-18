@@ -165,6 +165,13 @@ body {
     margin-right: 15px;
     font-weight: bold;
 }
+.fb-user-actions li.fb-user a {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    margin: 0 5px;
+}
+
 .fb-user-actions li.fb-user .fb-user-img {
     border-radius: 50%;
     background-color: var(--color-bg);
@@ -218,7 +225,7 @@ body {
 .fb-user-actions .fb-submenu {
     display: none;
     position: absolute;
-    top: 50px;
+    top: 45px;
     right: 0;
     background-color: var(--color-bg-white);
     box-shadow: 0 0 10px #ccc;
