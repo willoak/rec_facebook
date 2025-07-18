@@ -270,9 +270,6 @@ body {
 #fb-stories {
     margin-bottom: 30px;
 }
-#fb-stories .fb-stories-item {
-    margin: 0 4px;
-}
 #fb-stories .fb-stories-item .fb-box {
     border-radius: 8px;
     overflow: hidden;
