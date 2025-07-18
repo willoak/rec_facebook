@@ -197,6 +197,29 @@ body {
 #fb-stories .fb-stories-item .fb-box {
     border-radius: 8px;
     overflow: hidden;
+    position: relative;
+}
+
+#fb-stories .fb-stories-item .fb-bo {
+    border-radius: 8px;
+    overflow: hidden;
+    position: relative;
+}
+
+#fb-stories .fb-create-storie-area {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    padding: 8px;
+    color: var(--color-bg-white);
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.25);
+    transition: background-color 0.3s ease;
+}
+
+#fb-stories .fb-stories-item:hover .fb-create-storie-area {
+    background-color: rgba(0, 0, 0, 0.4);
 }
 
 #fb-stories .swiper {
