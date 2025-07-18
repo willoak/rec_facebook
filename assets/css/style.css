@@ -194,6 +194,19 @@ body {
     overflow: hidden;
 }
 
+#fb-stories .swiper {
+    width: 100%;
+}
+
+#fb-stories .swiper-slide {
+    display: flex;
+}
+
+#fb-stories .swiper-button-next,
+#fb-stories .swiper-button-prev {
+    color: var(--color-blue-h);
+}
+
 #fb-main .fb-box-wrapper {
     border-radius: 8px;
 }
