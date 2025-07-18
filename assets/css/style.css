@@ -282,9 +282,7 @@ body {
 
 #fb-stories .fb-user-image-stories {
     width: 100%;
-    height: 200px;
 }
-
 #fb-stories .fb-user-image-stories img,
 #fb-stories .fb-user-image-stories video {
     width: 100%;
@@ -325,9 +323,7 @@ body {
 
 #fb-stories .swiper-slide {
     display: flex;
-    height: 200px;
 }
-
 #fb-stories .swiper-button-next,
 #fb-stories .swiper-button-prev {
     color: var(--color-blue-h);
