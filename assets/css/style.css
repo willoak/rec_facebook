@@ -123,6 +123,11 @@ body {
     padding: 0 45px;
     line-height: 48px;
     position: relative;
+    color: #000;
+    text-align: center;
+}
+.fb-shortcuts li a i {
+    font-size: 22px;
 }
 .fb-shortcuts li a.active::after {
     content: "";
