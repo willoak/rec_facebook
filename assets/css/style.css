@@ -368,12 +368,18 @@ body {
 }
 .fb-post-actions {
     position: relative;
+    display: flex;
+    align-items: center;
 }
 .fb-post-actions a {
     margin-left: 5px;
     color: #65676b;
 }
-.fb-post-actions .fb-submenu {
+.fb-post-menu {
+    position: relative;
+    display: inline-block;
+}
+.fb-post-menu .fb-submenu {
     display: none;
     position: absolute;
     top: 20px;
@@ -381,12 +387,27 @@ body {
     background-color: var(--color-bg-white);
     box-shadow: 0 0 10px #ccc;
     border-radius: 8px;
+    width: 220px;
     padding: 10px;
     z-index: 10;
 }
-.fb-post-actions:hover .fb-submenu,
-.fb-post-actions .fb-submenu:hover {
+.fb-post-menu:hover .fb-submenu,
+.fb-post-menu .fb-submenu:hover {
     display: block;
+}
+.fb-post-actions .fb-submenu ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+.fb-post-actions .fb-submenu li {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin: 5px 0;
+}
+.fb-post-actions .fb-submenu li i {
+    color: #65676b;
 }
 .fb-post-body img,
 .fb-post-body video {
