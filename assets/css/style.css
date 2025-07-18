@@ -443,3 +443,14 @@ body {
     cursor: pointer;
     padding: 5px 0;
 }
+
+/* Publicidade sidebar direita */
+#fb-right .fb-ad {
+    margin-bottom: 20px;
+}
+
+#fb-right .fb-ad img {
+    width: 100%;
+    border-radius: 8px;
+    display: block;
+}
