@@ -165,13 +165,50 @@ body {
     margin-right: 15px;
     font-weight: bold;
 }
-.fb-user-actions li.fb-user span {
+.fb-user-actions li.fb-user .fb-user-img {
     border-radius: 50%;
     background-color: var(--color-bg);
     width: 30px;
     height: 30px;
     display: inline-block;
     margin-right: 5px;
+    object-fit: cover;
+}
+
+.fb-user-actions li {
+    position: relative;
+}
+
+.fb-user-actions .fb-submenu {
+    display: none;
+    position: absolute;
+    top: 45px;
+    right: 0;
+    background-color: var(--color-bg-white);
+    box-shadow: 0 0 10px #ccc;
+    border-radius: 8px;
+    width: 200px;
+    padding: 10px;
+    z-index: 10;
+}
+
+.fb-user-actions li:hover .fb-submenu,
+.fb-user-actions li .fb-submenu:hover {
+    display: block;
+}
+
+.fb-user-actions .fb-submenu ul {
+    list-style: none;
+    padding: 0;
+}
+
+.fb-user-actions .fb-submenu li {
+    display: block;
+    margin: 5px 0;
+}
+
+.fb-user-actions .fb-submenu a {
+    color: #000;
 }
 
 .fb-user-actions li {
