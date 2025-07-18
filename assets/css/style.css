@@ -385,8 +385,13 @@ body {
 .fb-post-actions .fb-submenu:hover {
     display: block;
 }
-.fb-post-body img,
-.fb-post-body video {
+.fb-post-body-content {
+    max-height: 600px;
+    overflow: hidden;
+}
+
+.fb-post-body-content img,
+.fb-post-body-content video {
     width: 100%;
     margin: 10px 0;
     border-radius: 8px;
