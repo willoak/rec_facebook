@@ -1,89 +1,123 @@
-<<<<<<< HEAD
-Recriando o front do Facebook (HTML + CSS)
-
-Visão geral
-- Página estática que reproduz a interface do Facebook usando HTML, CSS e um toque de JS para interação mínima.
-- Layout completo: header, navegação, feed central (stories, compositor de post, posts), colunas esquerda (menu/atalhos) e direita (patrocinado, aniversários, contatos).
-
-Como rodar
-- Recomendado: subir um servidor estático (ex.: `npx serve .`, `python -m http.server`, `live-server`).
-- Abrir direto via file:// funciona para o layout, mas o carregamento de JSON pode ser bloqueado pelo navegador; por isso, use um servidor.
-
-Estrutura
-- `index.html` — marcação principal do layout.
-- `assets/css/style.css` — estilos, utilitários e responsividade.
-- `assets/js/script.js` — interação simples (toggle de “Curtir”).
-- `assets/img/` — imagens de exemplo usadas nos stories e anúncios.
- - `assets/data/` — arquivos JSON para conteúdo dinâmico.
-
-Funcionalidades
-- Header fixo com logo, busca, abas (Home/Watch/Marketplace/Grupos/Jogos) e ações do usuário.
-- Coluna esquerda com menu/atalhos e rodapé legal.
-- Feed central com stories, compositor de publicação e posts de exemplo.
-- Coluna direita com patrocinados, aniversários e lista de contatos (indicador online).
-- Ícones representados por emojis (sem dependências externas).
-
-Responsividade
-- ≥ 1100px: 3 colunas (esquerda, centro, direita).
-- < 1100px: oculta coluna direita.
-- < 900px: mantém apenas o feed central; header simplificado.
-
-Interação
-- Clique em “Curtir” alterna o estado visual (classe `liked`) nos botões de post.
-
-Conteúdo dinâmico (JSON)
-- Stories: `assets/data/stories.json`
-- Feed (posts): `assets/data/feed.json`
-- Contatos: `assets/data/contacts.json`
-
-Observações
-- O JavaScript busca os JSONs e, em caso de erro (ex.: CORS em file://), usa dados de fallback embutidos no código.
-- As imagens de stories, posts (quando houver) e anúncios são substituídas por imagens aleatórias do Pexels em tempo de execução, para deixar o visual mais realista.
-
-Tecnologias
-- HTML5, CSS3 (variáveis, grid/flex), JavaScript vanilla.
-- Projeto 100% estático, sem build ou dependências.
-
-Próximos passos sugeridos
-- Substituir emojis por ícones SVG.
-- Modo escuro via variáveis CSS.
-- Acessibilidade: landmarks ARIA adicionais e foco de teclado.
-- Conteúdo dinâmico (carregar posts via JSON/templating).
-=======
 # Recriando o front do Facebook
 
-Este projeto é um estudo de **HTML**, **CSS** e um pouco de **JavaScript**
-para reproduzir a interface principal do Facebook. A proposta é praticar a
-construção de layouts responsivos utilizando apenas tecnologias nativas do
-navegador.
+Recriação de uma interface similar ao Facebook para estudo de layout com
+HTML, CSS e JavaScript (projeto 100% estático).
+
+## Visão geral
+- Página estática com header, navegação, feed (stories, compositor, posts),
+  e colunas laterais.
 
 ## Tecnologias
-
 - HTML5
 - CSS3
 - JavaScript (Vanilla)
-- [Swiper](https://swiperjs.com/) para os carrosséis
-- [Font Awesome](https://fontawesome.com/) para ícones
+- [Swiper](https://swiperjs.com/) (carrossel)
 
-## Estrutura do Projeto
+## Estrutura do projeto
 
 ```
 .
 ├── index.html
-├── assets
-│   ├── css
-│   ├── js
-│   └── img
+├── README.md
+└── assets/
+    ├── css/
+    ├── js/
+    └── img/
 ```
 
-## Como Executar
+## Como executar
 
-1. Clone este repositório.
-2. Abra o arquivo `index.html` diretamente no navegador ou utilize uma extensão
-   de *Live Server* de sua preferência.
-3. Nenhuma dependência adicional é necessária, pois o projeto é totalmente
-   estático.
+Recomendo usar um servidor estático para evitar problemas de CORS ao carregar
+JSONs locais. Exemplos:
 
-Sinta-se à vontade para explorar e customizar!
+```bash
+# usando http.server (Python)
+python -m http.server 8000
 
->>>>>>> 930d367bc83426fc77b3fbf88a4a7c24fbdde775
+# usando npm 'serve'
+npx serve .
+```
+
+Depois, abra `http://localhost:8000` no navegador.
+
+## Dicas rápidas de Git
+
+- Desfazer um `git add` (desestage um arquivo):
+
+```bash
+# desfazer um arquivo
+git restore --staged caminho/para/arquivo
+
+# desfazer tudo (equivalente a "voltar o git add .")
+git restore --staged .
+```
+
+Se estiver usando uma versão antiga do Git (<2.23), use:
+
+```bash
+git reset HEAD caminho/para/arquivo
+git reset HEAD .
+```
+
+- Atualizar (amendar) o último commit com as mudanças staged:
+
+```bash
+git commit --amend
+```
+
+Para não abrir o editor e manter a mesma mensagem:
+
+```bash
+git commit --amend --no-edit
+```
+
+- Enviar um commit amendado para o remoto (use com cuidado):
+
+```bash
+# recomendado: força segura
+git push --force-with-lease origin master
+```
+
+- Alternar remote para HTTPS (se tiver problemas com SSH):
+
+```bash
+git remote set-url origin https://github.com/<usuario>/<repo>.git
+```
+
+- Testar conexão SSH com GitHub:
+
+```bash
+ssh -T git@github.com
+```
+
+Se a chave SSH não estiver registrada, copie o conteúdo de `~/.ssh/id_ed25519.pub`
+e adicione em: https://github.com/settings/keys
+
+## Resolução de conflitos básicos
+
+Se apareceram marcadores de merge no arquivo (por exemplo `<<<<<<<`, `=======`,
+`>>>>>>>`), escolha a versão que deseja manter ou combine as mudanças, então:
+
+```bash
+# marque o arquivo como resolvido
+git add index.html
+git commit
+```
+
+Durante um merge você pode aceitar a versão local (ours) ou a remota (theirs):
+
+```bash
+git checkout --ours index.html
+git add index.html
+# ou
+git checkout --theirs index.html
+git add index.html
+git commit
+```
+
+## Outros
+- Arquivo principal: `index.html`.
+- Estática; nenhum build é necessário.
+
+Contribuições são bem-vindas. Se quiser, faço um commit com este README e
+envio para o repositório — quer que eu faça isso agora?
