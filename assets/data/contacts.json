@@ -1,0 +1,8 @@
+[
+  { "name": "Sasuke Uchiha", "initial": "S", "online": true },
+  { "name": "Kakashi Hatake", "initial": "K", "online": true },
+  { "name": "Gaara", "initial": "G", "online": false },
+  { "name": "Hinata Hyuga", "initial": "H", "online": true },
+  { "name": "Rock Lee", "initial": "R", "online": false }
+]
+

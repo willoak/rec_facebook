@@ -2,110 +2,150 @@
 <html lang="pt-BR">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Facebook</title>
-
+    <!-- Owl Carousel CSS (antes do Tailwind para permitir overrides no tw.css) -->
+    <link rel="stylesheet" href="assets/vendor/owl/owl.carousel.min.css" />
+    <link rel="stylesheet" href="assets/vendor/owl/owl.theme.default.min.css" />
+    <!-- Tailwind build (gerado em assets/css/tw.css) -->
+    <link rel="stylesheet" href="assets/css/tw.css" />
+    <!-- CSS do projeto mantém prioridade sobre utilitários -->
     <link rel="stylesheet" href="assets/css/style.css" />
   </head>
-  <body>
-    <header id="fb-h-geral">
-      <div class="fb-container-full fb-fixed fb-box-shadow fb-flex fb-justify-btw fb-align-center fb-h-6 fb-p-lr-2">
-        <div class="fb-box fb-flex fb-align-center">
-          <div class="fb-logo">logo</div>
-          <div class="fb-search">
-            <div class="fb-box fb-relative">
-              <div class="fb-icon-search"></div>
-              <input type="text" id="fb-search" placeholder="Pesquisar no facebook" />
-            </div>
-          </div>
-        </div>
-        <div class="fb-box">
-          <div class="fb-shortcuts fb-flex fb-justify-center">
-            <ul>
-              <li><a href="" class="active">link</a></li>
-              <li>
-                <a href="">link <span class="fb-alert">9</span></a>
-              </li>
-              <li><a href="">link</a></li>
-              <li><a href="">link</a></li>
-              <li><a href="">link</a></li>
-            </ul>
-          </div>
-        </div>
-        <div class="fb-box fb-flex fb-justify-end">
-          <div class="fb-user-actions">
-            <ul class="fb-flex">
-              <li class="fb-user">
-                <a href="" class="fb-flex fb-align-center"> <span class="fb-user-img"></span> Willian </a>
-              </li>
-              <li><a href="">link</a></li>
-              <li><a href="">link</a></li>
-              <li><a href="">link</a></li>
-              <li><a href="">link</a></li>
-            </ul>
-          </div>
-        </div>
+  <body class="bg-zinc-100 text-zinc-900 font-sans antialiased">
+    <!-- Header -->
+    <header class="fb-header bg-white/95 supports-[backdrop-filter]:bg-white/80 backdrop-blur shadow-sm border-b border-zinc-200">
+      <div class="fb-header-left">
+        <a href="#" class="fb-logo" aria-label="Facebook">
+          <span class="fb-f">f</span>
+        </a>
+        <label class="fb-search" for="fb-search-input">
+          <span class="fb-ico" aria-hidden>🔎</span>
+          <input id="fb-search-input" type="text" placeholder="Pesquisar no Facebook" />
+        </label>
+      </div>
+
+      <nav class="fb-header-center" aria-label="Navegação principal">
+        <a href="#" class="fb-tab active" aria-current="page" title="Página inicial">🏠</a>
+        <a href="#" class="fb-tab" title="Watch">▶️</a>
+        <a href="#" class="fb-tab" title="Marketplace">🛍️</a>
+        <a href="#" class="fb-tab" title="Grupos">👥</a>
+        <a href="#" class="fb-tab" title="Jogos">🎮</a>
+      </nav>
+
+      <div class="fb-header-right">
+        <a href="#" class="fb-quick fb-user" aria-label="Perfil">
+          <span class="fb-avatar">W</span>
+          <span class="fb-username">Willian</span>
+        </a>
+        <button class="fb-quick" aria-label="Menu">☰</button>
+        <button class="fb-quick" aria-label="Messenger">💬</button>
+        <button class="fb-quick fb-has-badge" aria-label="Notificações">🔔<span class="fb-badge">3</span></button>
+        <button class="fb-quick" aria-label="Conta">▾</button>
       </div>
     </header>
 
-    <main id="fb-main" class="fb-flex">
-      <aside id="fb-left">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quae omnis fuga iure voluptas culpa enim magni? Perspiciatis odio aliquid tenetur. Maxime doloremque necessitatibus ratione magnam consequuntur itaque ab repudiandae vel!</aside>
+    <!-- Layout principal -->
+    <main class="fb-main">
+      <!-- Coluna esquerda -->
+      <aside class="fb-left" aria-label="Menu lateral">
+        <ul class="fb-menu">
+          <li><a href="#"><span class="fb-avatar">W</span>Willian</a></li>
+          <li><a href="#"><span class="fb-ico">👥</span>Amigos</a></li>
+          <li><a href="#"><span class="fb-ico">⏳</span>Lembranças</a></li>
+          <li><a href="#"><span class="fb-ico">💾</span>Salvos</a></li>
+          <li><a href="#"><span class="fb-ico">👥</span>Grupos</a></li>
+          <li><a href="#"><span class="fb-ico">▶️</span>Watch</a></li>
+          <li><a href="#"><span class="fb-ico">🛍️</span>Marketplace</a></li>
+          <li><a href="#"><span class="fb-ico">📰</span>Feeds</a></li>
+          <li><a href="#"><span class="fb-ico">📅</span>Eventos</a></li>
+          <li><a href="#"><span class="fb-ico">⚙️</span>Configurações</a></li>
+        </ul>
 
-      <section id="fb-content-area">
-        <section class="fb-box-wrapper" id="fb-stories">
-          <div class="fb-stories-wrap fb-flex">
-            <div class="fb-stories-item fb-first">
-              <div class="fb-bo fb-relative">
-                <div class="fb-user-image-stories">
-                  <img src="assets/img/naruto.jpg" alt="" />
-                </div>
-                <div class="fb-create-storie-area">
-                  <p>Crie um story legal</p>
-                </div>
-              </div>
-            </div>
+        <div class="fb-shortcuts">
+          <h3>Seus atalhos</h3>
+          <ul>
+            <li><a href="#"><span class="fb-ico">#</span>Frontend Brasil</a></li>
+            <li><a href="#"><span class="fb-ico">#</span>Dev Jobs</a></li>
+            <li><a href="#"><span class="fb-ico">#</span>UX Design</a></li>
+          </ul>
+        </div>
 
-            <div class="fb-stories-item">
-              <div class="fb-box">
-                <div class="fb-user-image-stories">
-                  <img src="assets/img/naruto.jpg" alt="" />
-                </div>
-              </div>
-            </div>
+        <div class="fb-legal">
+          <small>Privacidade · Termos · Anúncios · Cookies · Mais · Meta © 2025</small>
+        </div>
+      </aside>
 
-            <div class="fb-stories-item fb-first">
-              <div class="fb-box">
-                <div class="fb-user-image-stories">
-                  <img src="assets/img/naruto.jpg" alt="" />
-                </div>
-              </div>
-            </div>
+      <!-- Coluna central (feed) -->
+      <section class="fb-center" aria-label="Feed principal">
+        <!-- Stories (carregadas via JSON) -->
+        <section class="fb-stories">
+          <div class="fb-stories-track" id="fb-stories-root"></div>
+        </section>
 
-            <div class="fb-stories-item">
-              <div class="fb-box">
-                <div class="fb-user-image-stories">
-                  <img src="assets/img/naruto.jpg" alt="" />
-                </div>
-              </div>
-            </div>
-
-            <div class="fb-stories-item fb-first">
-              <div class="fb-box">
-                <div class="fb-user-image-stories">
-                  <img src="assets/img/naruto.jpg" alt="" />
-                </div>
-              </div>
-            </div>
+        <!-- Criar publicação -->
+        <section class="fb-composer fb-card rounded-xl border border-zinc-200 shadow-sm bg-white">
+          <div class="fb-composer-top">
+            <span class="fb-avatar">W</span>
+            <input type="text" placeholder="No que você está pensando, Willian?" />
+          </div>
+          <div class="fb-composer-actions">
+            <button class="fb-action"><span class="fb-ico">📡</span>Vídeo ao vivo</button>
+            <button class="fb-action"><span class="fb-ico">🖼️</span>Foto/vídeo</button>
+            <button class="fb-action"><span class="fb-ico">😊</span>Sentimento/atividade</button>
           </div>
         </section>
 
-        <section class="fb-box-wrapper fb-box-wrapper-color" id="fb-create-post">
-          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Provident reprehenderit, neque veritatis excepturi ipsam odio nesciunt perspiciatis optio distinctio officiis corporis iusto necessitatibus atque laborum at, corrupti, dolorem cum laudantium!
-        </section>
+        <!-- Feed (carregado via JSON) -->
+        <div id="fb-feed-root"></div>
       </section>
-      <!-- // fb content area -->
 
-      <aside id="fb-right">Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque, nisi quis, expedita minima adipisci earum nobis ea nam repudiandae consectetur officia eos as</aside>
+      <!-- Coluna direita -->
+      <aside class="fb-right" aria-label="Painel lateral">
+        <section class="fb-card fb-sponsored">
+          <h3>Patrocinado</h3>
+          <a href="#" class="fb-ad">
+            <img class="rounded-md aspect-video object-cover" src="assets/img/naruto.jpg" alt="Anúncio 1" />
+            <div>
+              <strong>Curso de Chakra</strong>
+              <span>chakra.academy</span>
+            </div>
+          </a>
+          <a href="#" class="fb-ad">
+            <img class="rounded-md aspect-video object-cover" src="assets/img/naruto.jpg" alt="Anúncio 2" />
+            <div>
+              <strong>Kunai Pro</strong>
+              <span>ninja.tools</span>
+            </div>
+          </a>
+        </section>
+
+        <section class="fb-card fb-birthdays rounded-xl border border-zinc-200 shadow-sm bg-white">
+          <h3>Aniversários</h3>
+          <p>Hoje é aniversário de <strong>Sakura Haruno</strong>.</p>
+        </section>
+
+        <section class="fb-card fb-contacts rounded-xl border border-zinc-200 shadow-sm bg-white">
+          <header class="fb-contacts-header">
+            <span>Contatos</span>
+            <div class="fb-contacts-actions">
+              <button title="Opções">⋯</button>
+              <button title="Nova conversa">✉️</button>
+              <button title="Vídeo">📹</button>
+            </div>
+          </header>
+          <ul id="fb-contacts-root"></ul>
+        </section>
+      </aside>
     </main>
+
+    <!-- jQuery + Owl Carousel -->
+    <script src="assets/vendor/jquery/jquery.min.js"></script>
+    <script src="assets/vendor/owl/owl.carousel.min.js"></script>
+    <script src="assets/js/utils.js"></script>
+    <script src="assets/js/stories.js"></script>
+    <script src="assets/js/feed.js"></script>
+    <script src="assets/js/contacts.js"></script>
+    <script src="assets/js/main.js"></script>
   </body>
 </html>

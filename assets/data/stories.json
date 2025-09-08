@@ -1,0 +1,80 @@
+﻿[
+    {
+        "id":  "create",
+        "label":  "Criar story",
+        "image":  "assets/img/naruto.jpg",
+        "type":  "create"
+    },
+    {
+        "id":  1,
+        "name":  "Naruto",
+        "avatar":  "N",
+        "image":  "assets/img/naruto.jpg"
+    },
+    {
+        "id":  2,
+        "name":  "Sakura",
+        "avatar":  "S",
+        "image":  "assets/img/naruto.jpg"
+    },
+    {
+        "id":  3,
+        "name":  "Sasuke",
+        "avatar":  "U",
+        "image":  "assets/img/naruto.jpg"
+    },
+    {
+        "id":  4,
+        "name":  "Kakashi",
+        "avatar":  "K",
+        "image":  "assets/img/naruto.jpg"
+    },
+    {
+        "image":  "assets/img/naruto.jpg",
+        "name":  "Hinata",
+        "id":  5,
+        "avatar":  "H"
+    },
+    {
+        "image":  "assets/img/naruto.jpg",
+        "name":  "Shikamaru",
+        "id":  6,
+        "avatar":  "S"
+    },
+    {
+        "image":  "assets/img/naruto.jpg",
+        "name":  "Rock Lee",
+        "id":  7,
+        "avatar":  "R"
+    },
+    {
+        "image":  "assets/img/naruto.jpg",
+        "name":  "Gaara",
+        "id":  8,
+        "avatar":  "G"
+    },
+    {
+        "image":  "assets/img/naruto.jpg",
+        "name":  "Tsunade",
+        "id":  9,
+        "avatar":  "T"
+    },
+    {
+        "image":  "assets/img/naruto.jpg",
+        "name":  "Itachi",
+        "id":  10,
+        "avatar":  "I"
+    },
+    {
+        "image":  "assets/img/naruto.jpg",
+        "name":  "Jiraiya",
+        "id":  11,
+        "avatar":  "J"
+    },
+    {
+        "image":  "assets/img/naruto.jpg",
+        "name":  "Neji",
+        "id":  12,
+        "avatar":  "N"
+    }
+]

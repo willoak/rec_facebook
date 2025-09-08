@@ -1,0 +1,35 @@
+[
+  {
+    "id": 101,
+    "author": { "name": "Naruto Uzumaki", "initial": "N" },
+    "time": "2 h",
+    "privacy": "public",
+    "text": "Treinando para me tornar Hokage! 🍥",
+    "image": "assets/img/naruto.jpg",
+    "reactions": { "like": true, "love": true, "care": false, "count": "1,2 mil" },
+    "comments": 243,
+    "shares": 31
+  },
+  {
+    "id": 102,
+    "author": { "name": "Sakura Haruno", "initial": "S" },
+    "time": "Ontem",
+    "privacy": "friends",
+    "text": "Florindo no hospital com muita energia 💮",
+    "image": null,
+    "reactions": { "like": true, "love": false, "care": true, "count": 327 },
+    "comments": 45,
+    "shares": 3
+  },
+  {
+    "id": 102,
+    "author": { "name": "Sakura Haruno", "initial": "S" },
+    "time": "Ontem",
+    "privacy": "friends",
+    "text": "Florindo no hospital com muita energia 💮",
+    "image": null,
+    "reactions": { "like": true, "love": false, "care": true, "count": 327 },
+    "comments": 45,
+    "shares": 3
+  }
+]
