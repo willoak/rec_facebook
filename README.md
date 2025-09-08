@@ -4,10 +4,12 @@ Recriação de uma interface similar ao Facebook para estudo de layout com
 HTML, CSS e JavaScript (projeto 100% estático).
 
 ## Visão geral
+
 - Página estática com header, navegação, feed (stories, compositor, posts),
   e colunas laterais.
 
 ## Tecnologias
+
 - HTML5
 - CSS3
 - JavaScript (Vanilla)
@@ -116,6 +118,7 @@ git commit
 ```
 
 ## Outros
+
 - Arquivo principal: `index.html`.
 - Estática; nenhum build é necessário.
 
