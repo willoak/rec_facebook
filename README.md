@@ -42,80 +42,80 @@ npx serve .
 
 Depois, abra `http://localhost:8000` no navegador.
 
-## Dicas rápidas de Git
+## Tailwind CSS — como rodar os comandos no projeto
 
-- Desfazer um `git add` (desestage um arquivo):
+Observações/assunções:
 
-```bash
-# desfazer um arquivo
-git restore --staged caminho/para/arquivo
+- Este projeto já contém arquivos relacionados ao Tailwind:
+  - `package.json` com scripts `dev:css` e `build:css`.
+  - `tailwind.config.js` e `postcss.config.js`.
+  - `assets/css/tailwind.css` (arquivo de entrada que já contém as diretivas `@tailwind`).
+- Antes de rodar qualquer comando, execute `npm install` para instalar as dependências.
 
-# desfazer tudo (equivalente a "voltar o git add .")
-git restore --staged .
-```
+Passos rápidos (one-time / se necessário):
 
-Se estiver usando uma versão antiga do Git (<2.23), use:
-
-```bash
-git reset HEAD caminho/para/arquivo
-git reset HEAD .
-```
-
-- Atualizar (amendar) o último commit com as mudanças staged:
+1. Se você ainda não tem `package.json`, inicialize com:
 
 ```bash
-git commit --amend
+npm init -y
 ```
 
-Para não abrir o editor e manter a mesma mensagem:
+2. Caso não tenha as dependências instaladas, instale-as (ou rode `npm install` se
+   já existir `package.json`):
 
 ```bash
-git commit --amend --no-edit
+npm install
+# -- ou, manualmente --
+# npm install -D tailwindcss postcss autoprefixer
 ```
 
-- Enviar um commit amendado para o remoto (use com cuidado):
+3. (Opcional) Se `tailwind.config.js` não existir, gere com:
 
 ```bash
-# recomendado: força segura
-git push --force-with-lease origin master
+npx tailwindcss init -p
 ```
 
-- Alternar remote para HTTPS (se tiver problemas com SSH):
+Atenção ao arquivo de entrada
+
+- O arquivo de entrada usado neste projeto é `assets/css/tailwind.css` e ele
+  já contém:
+
+```css
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+```
+
+Comandos recomendados (já alinhados com `package.json` do projeto)
+
+- Usando os scripts definidos em `package.json` (recomendado):
 
 ```bash
-git remote set-url origin https://github.com/<usuario>/<repo>.git
+# desenvolvimento (watch)
+npm run dev:css
+
+# build para produção (minificado)
+npm run build:css
 ```
 
-- Testar conexão SSH com GitHub:
+- Equivalente usando npx diretamente (caso prefira):
 
 ```bash
-ssh -T git@github.com
+npx tailwindcss -i ./assets/css/tailwind.css -o ./assets/css/tw.css --watch
+npx tailwindcss -i ./assets/css/tailwind.css -o ./assets/css/tw.css --minify
 ```
 
-Se a chave SSH não estiver registrada, copie o conteúdo de `~/.ssh/id_ed25519.pub`
-e adicione em: https://github.com/settings/keys
+Notas importantes
 
-## Resolução de conflitos básicos
+- `index.html` referencia `assets/css/tw.css` (arquivo de saída). Rode os comandos
+  acima para gerar/atualizar esse arquivo.
+- `tailwind.config.js` atualmente define `corePlugins.preflight: false`; isso
+  desativa o reset/base do Tailwind. Remova essa opção se quiser o reset
+  padrão.
+- O `content` em `tailwind.config.js` cobre `./index.html` e `./assets/js/**/*.js`;
+  se você tiver HTML em subpastas, adicione `./**/*.html` ao array `content`.
 
-Se apareceram marcadores de merge no arquivo (por exemplo `<<<<<<<`, `=======`,
-`>>>>>>>`), escolha a versão que deseja manter ou combine as mudanças, então:
-
-```bash
-# marque o arquivo como resolvido
-git add index.html
-git commit
-```
-
-Durante um merge você pode aceitar a versão local (ours) ou a remota (theirs):
-
-```bash
-git checkout --ours index.html
-git add index.html
-# ou
-git checkout --theirs index.html
-git add index.html
-git commit
-```
+---
 
 ## Outros
 
