@@ -7,7 +7,7 @@
     if (!container) return;
     const fallback = [
       { id: 'create', label: 'Criar story', image: 'assets/img/naruto.jpg', type: 'create' },
-      { id: 1, name: 'Naruto', avatar: 'N', image: 'assets/img/naruto.jpg' },
+      { id: 1, name: 'Narutos', avatar: 'N', image: 'assets/img/naruto.jpg' },
       { id: 2, name: 'Sakura', avatar: 'S', image: 'assets/img/naruto.jpg' },
       { id: 3, name: 'Sasuke', avatar: 'U', image: 'assets/img/naruto.jpg' },
       { id: 4, name: 'Kakashi', avatar: 'K', image: 'assets/img/naruto.jpg' },
