@@ -7,8 +7,14 @@
     },
     {
         "id":  1,
-        "name":  "Naruto",
+        "name":  "Narutos",
         "avatar":  "N",
+        "image":  "assets/img/naruto.jpg"
+    },
+    {
+        "id":  13,
+        "name":  "Lopes",
+        "avatar":  "L",
         "image":  "assets/img/naruto.jpg"
     },
     {
